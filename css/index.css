@@ -1,0 +1,155 @@
+@font-face{
+    font-family: "Ubuntu Regular";
+    /* Numerous fallbacks for different browsers */
+    src: url('fonts/ubuntu-r-webfont.ttf') format('truetype'),
+         url('fonts/ubuntu-r-webfont.eot') format('embedded-opentype'),
+         url('fonts/ubuntu-r-webfont.woff') format('woff'),
+         url('fonts/ubuntu-r-webfont.svg') format('svg')
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Ubuntu Regular";
+}
+#header{
+    background-color: rgab(0,0,0, 0.8);
+}
+#nav{
+    background-color: #1E1E1E;
+    color: #FFF;
+    height: 60px;
+    /* this will allow us to absolutely position elements with respect to the nav bar */
+    position: relative;
+}
+#nav ul{
+    margin-top: 10px;
+    margin-right: 20px;
+}
+#nav ul li{
+    background-color: #353D40;
+    display: inline-block;
+    padding: 7px;
+    margin-right: 20px;
+}
+#blog-tab{
+    background-color: rgba(255, 0,0, 0.9);
+    border-bottom-right-radius: 15px;
+    font-weight: 100;
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    top: 0;
+    left: 30px;
+    font-size: 2.1em;
+    box-shadow: 1px 1px 5px #333;
+}
+#blog-tab p{
+    margin-top: 20px;
+    margin-left: 8px;
+}
+#blog-name{
+    margin-left: 100px;
+}
+#main{
+    background-color: #77C0C0;
+    color: white;
+}
+#main h1{
+    text-align: center;
+    margin: 0;
+    padding: 40px 0 40px 0;
+    font-size: 4.5em;
+    line-height: 1.5em;
+}
+#blog, #portfolio{
+    padding: 30px 20px 0 20px;
+    /* generates shadows seen in wireframe at the top of the blog and portfolio containers */
+    box-shadow:inset 0px 4px 7px -3px #AAA;
+}
+#portfolio-title{
+    padding-left: 15px;
+}
+.portfolio-entry{
+    margin-right: 15px;
+}
+#blog .blog-entry{
+    margin-bottom:30px;
+}
+#blog .blog-entry a{
+    color: #DB7E68;
+}
+#blog .blog-entry:after{
+    display: block;
+    content: "";
+    height: 5px;
+    /* in order to maintain semantic markup and avoid cluttering the DOM with unnecessary elements,
+     * we employ the after pseudo class, although this carries with it it's own set of performance
+     * implications */
+    background: url('../images/line-dotted.gif') repeat-x;
+}
+#blog .blog-entry-image{
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+#blog .blog-entry-image, #portfolio .portfolio-entry-image{
+    /* GARNISH: adds a cool photograph-esque border to images on the page */
+    padding: 8px;
+    border: solid;
+    border-color: #DDD #AAA #AAA #DDD;
+    border-width: 1px 2px 2px 1px;
+    background-color: white;
+}
+#portfolio{
+    background-image: url('../images/bg-white-texture.png');
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
+}
+#portfolio .portfolio-entry[class*="span"]
+{
+    /* HACK: By default, bootstrap imposes a margin to all elements classed for usage with
+     * it's grid system. This rule reduces that default on portfolio entries */
+    margin-left: 5px;
+}
+#footer
+{
+    padding-top: 40px;
+    padding: 40px 40px 0 30px;
+    background-color: #000;
+    color: white;
+}
+#footer .form-horizontal .control-label{
+    /* To wrangle the control labels in the 'Drop Me A Line' section, this rule was necessary */
+    width: 0;
+}
+#footer .form-horizontal .controls{
+    /* To wrangle the controls distance of the controls from their container, this rule was necessary */
+    margin-left: 80px;
+}
+#footer #social-panel{
+    padding-left: 90px;
+}
+.social-button{
+    background-image: url('../images/sprites.png') ;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-right: 15px;
+}
+.facebook-button{
+    background-position: 0 0;
+}
+.twitter-button{
+    background-position: -30px 0px;
+}
+.flickr-button{
+    background-position: -60px 0px;
+}
+.vimeo-button{
+    background-position: -90px 0;
+}
+.googleplus-button{
+    background-position: -120px 0;
+}
+.linkedin-button{
+    background-position: -150px 0;
+}
